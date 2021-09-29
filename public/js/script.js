@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Parallax.init(elems, options);
   });
 
+  $('#textarea1').val('New Text');
+  M.textareaAutoResize($('#textarea1'));
+
+
+
+
+  
+
   /* ===== PRÓPRIAS FUNÇÕES ===== */
 
 /* Função chamada no carregamento da página home*/
@@ -33,7 +41,7 @@ function carousel() {
   ];
 
   let tamArr = pathIgm.length;
-  let header = document.getElementById("header"); // seleciona o header
+  let header = document.getElementById("carousel"); // seleciona o header
 
   let randomImg = Math.floor( (Math.random() * 10) % 3 ); // gera números aleatórios entre 0 e 3 para os índices do array de imagens
 

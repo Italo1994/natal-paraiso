@@ -10,8 +10,18 @@
     flex-shrink: 1;
 }
 
+.dp-flex {
+    display: flex;
+}
+
 /* USO = ALINHANDO OS LINKS DA NAVEGAÇÃO AO CENTRO EM AMBOS OS EIXOS */
 .justify-align-center {
     justify-content: center;
+    align-items: center;
+}
+
+.justify-align-end {
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
 }

@@ -8,8 +8,14 @@
     box-sizing: border-box;
 }
 
+/* ===== SELETORES CUSTOMIZADOS ===== */
+.padding-sup {
+    padding: 70px 0;
+}
+
 body {
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 ul {
@@ -38,22 +44,52 @@ ul li a {
 
 ul li a:hover {
     background-color: rgba(0, 0, 0, .4);
+    color: #fff;
 }
+
+form div {
+    margin-left: 10px;
+}
+
+input::placeholder {
+    color: rgb(77, 68, 68);
+}
+
+textarea {
+    color:rgb(77, 68, 68);
+}
+
+.btn {
+    background-color: #022659;
+}
+
+.btn:hover {
+    background-color: #0e4694;
+}
+
+/* ----- FIM DOS SELETORES CUSTOMIZADOS ----- */
+
 
 #header {
     width: 100%;
-    height: 80vh;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)), url("../img/eiffel-tower.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     border-bottom-right-radius: 30px;
     border-bottom-left-radius: 30px;
 }
 
+#carousel {
+    height: 65vh;
+    /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)), url("../img/eiffel-tower.jpg"); */
+    background-image: url("../img/eiffel-tower.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* ===== MENU DE NAVEGAÇÃO PRINCIPAL ===== */
 .main-nav {
     width: 100%;
     height: 70px;
-    background-color: rgba(0, 0, 0, .7);
+    /* background-color: rgba(0, 0, 0, .7); */
+    background-color: #fff;
     display: flex;
     align-items: center;
 }
@@ -70,7 +106,8 @@ nav .list-items {
 }
 
 .list-items li a {
-    color: #fff;
+    /* color: #fff; */
+    color: #000;
 }
 
 .area-logo {
@@ -125,7 +162,9 @@ nav .list-items {
     background-size: contain;
 }
 
-/*  ======== SECTION PASSEIOS ======== */
+/* ----- FIM DO MENU DE NAVEGAÇÃO PRINCIPAL ----- */
+
+/*  ====== SECTION PASSEIOS ====== */
 
 .box-passeio {
     width: 100%;
@@ -143,6 +182,9 @@ nav .list-items {
     font-size: 35px;
 }
 
+/* ----- FIM DA SEÇÃO PASSEIOS ----- */
+
+
 #secao-parallax {
     background-image: url("../img/palace.jpg");
     background-size: 100% 600px;
@@ -152,7 +194,43 @@ nav .list-items {
     height: 600px;
 }
 
-/* TIPOGRAFIA */
+/* ===== SEÇÃO QUEM SOMOS ===== */
+#quem-somos {
+    text-align: justify;
+    line-height: 25px;
+    font-size: 20px;
+}
+
+/* FIM DA SEÇÃO QUEM SOMOS ----- */
+
+
+/* ===== SEÇÃO DE CONTATO ===== */
+#contato {
+    border-top: 1px solid rgb(139, 135, 135);
+}
+
+/* ----- FIM DA SEÇÃO DE CONTATO ----- */
+
+
+/* ===== SEÇÃO FOOTER ==== */
+#footer {
+    background-color: #022659;
+    color: #fff;
+    height: auto;
+    padding: 25px 0;
+}
+
+.social-icons {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 25px;
+}
+
+/* ----- FIM DA SEÇÃO FOOTER ----- */
+
+
+/* ===== TIPOGRAFIA ===== */
 .laranja {
     color: #FF5400;
     font-weight: 600;
@@ -160,6 +238,10 @@ nav .list-items {
 
 .azul-escuro {
     color: #022659;
+}
+
+.bg-azul-escuro {
+    background-color: #022659;
 }
 
 .azul-claro {
