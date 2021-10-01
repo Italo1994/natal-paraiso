@@ -16,6 +16,7 @@
 body {
     background-color: #fff;
     overflow-x: hidden;
+    position: relative;
 }
 
 ul {
@@ -43,8 +44,9 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .9);
     color: #fff;
+    transition: all .8s;
 }
 
 form div {
@@ -55,7 +57,7 @@ input::placeholder {
     color: rgb(77, 68, 68);
 }
 
-textarea {
+textarea label {
     color:rgb(77, 68, 68);
 }
 
@@ -166,6 +168,10 @@ nav .list-items {
 
 /*  ====== SECTION PASSEIOS ====== */
 
+.container-box-passeio {
+    height: 300px;
+}
+
 .box-passeio {
     width: 100%;
     height: 100%;
@@ -180,6 +186,12 @@ nav .list-items {
 
 .arrow-icon {
     font-size: 35px;
+}
+
+.area-preco {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 /* ----- FIM DA SEÇÃO PASSEIOS ----- */
@@ -214,17 +226,34 @@ nav .list-items {
 
 /* ===== SEÇÃO FOOTER ==== */
 #footer {
+    /* background-color: #022659; */
+    /* border-top: 1px solid rgb(139, 135, 135); */
+    /* background-color: rgb(175, 174, 174); */
     background-color: #022659;
     color: #fff;
     height: auto;
     padding: 25px 0;
 }
 
+#footer .row:nth-child(1) {
+    /* border-top: 1px solid rgb(139, 135, 135); */
+}
+
 .social-icons {
     display: inline-block;
-    width: 40px;
-    height: 40px;
     margin: 0 25px;
+}
+
+.tamanho-icone {
+    font-size: 30px;
+}
+
+.area-whatsapp {
+    display: flex;
+}
+
+.area-whatsapp a {
+    margin-right: 10px;
 }
 
 /* ----- FIM DA SEÇÃO FOOTER ----- */
@@ -244,6 +273,10 @@ nav .list-items {
     background-color: #022659;
 }
 
+.bg-azul-claro {
+    background-color: #2D307A;
+}
+
 .azul-claro {
     color: #2D307A;
 }
@@ -259,4 +292,9 @@ nav .list-items {
 .main-title {
     font-size: 40px;
     font-weight: 600;
+}
+
+.descricao-passeio {
+    font-size: 17px;
+    font-weight: 500;
 }

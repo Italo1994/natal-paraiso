@@ -27,6 +27,7 @@
         <!-- CSS da Aplicação -->
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/flex-properties.css">
+        <link rel="stylesheet" href="/css/responsive.css">
 
         <script src="/js/script.js"></script>
     </head>
@@ -34,6 +35,7 @@
 
     <header>
         <div id="header">
+            @yield('navegacao')
             <nav class="main-nav">
                 <div class="area-logo ">
                     <a href="/" class="justify-align-center"> <img src="/img/logo.png"/> <p class="azul-escuro">Natal <span class="laranja"> Paraíso </span> </p> </a>
@@ -44,7 +46,7 @@
                             <a href="/" class="justify-align-center">INÍCIO</a>
                         </li>
                         <li class="flex-1">
-                            <a href="/" class="justify-align-center">PASSEIOS</a>
+                            <a href="/passeios" class="justify-align-center">PASSEIOS</a>
                         </li>
                         <li class="flex-1">
                             <a href="/" class="justify-align-center flex-1">SOBRE</a>
@@ -55,12 +57,6 @@
                     </ul>
                 </div>
                 <div class="area-account">
-                    <!--
-                <div class="input-field col s12">
-                    <input id="search" type="text" class="validate">
-                    <label for="search">Search</label>
-                </div>
-                    -->
                     <a href="#" class="fb-35">
                         <!-- <img src="/img/icons/search.svg" width="100%"> -->
                         <i class="large material-icons" style="color: black;">search</i>
@@ -69,13 +65,14 @@
                         <!-- <img src="/img/icons/account_circle.svg" width="100%"> -->
                         <i class="large material-icons" style="color: black;">account_circle</i>
                     </a>
-                    <a href="#" class="fb-35">
+                    <a href="/carrinho" class="fb-35">
                         <!-- <img src="/img/icons/shopping_cart.svg" width="100%"> -->
                         <i class="large material-icons" style="color: black;">local_grocery_store</i>
                     </a>
                 </div>
             </nav>
         </div>
+
         <div id="carousel">
 
         </div>
@@ -100,18 +97,27 @@
                 <div class="col s12 m6 l6 box-passeio">
                     <a href="#">
                         <div class="row">
-                                <div class="col s12 m12">
-                                    <div class="card">
-                                        <div class="card-image">
+                            <div class="col s12 m12">
+                                <div class="card">
+                                    <div class="card-image">
                                         <img src="/img/barco4" class="responsive-img">
-                                        <span class="card-title">Card Title</span>
+                                        <span class="card-title">Mergulho em Maracajaú</span>
                                         <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                                        </div>
-                                        <div class="card-content">
-                                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="informacoes-passeio">
+                                            <div class="area-preco">
+                                                <h5>Maracajaú (Passeio de Barco)</h5>
+                                            </div>
+                                            <div class="area-preco">
+                                                <p>
+                                                    A PARTIR DE <b>R$ 270,00</b>
+                                                </p>      
+                                            </div>
+                                        </div> <!-- Fim da div informacoes-passeio -->
                                     </div>
                                 </div>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -119,18 +125,27 @@
                 <div class="col s12 m6 l6 box-passeio">
                     <a href="#">
                         <div class="row">
-                                <div class="col s12 m12">
-                                    <div class="card">
-                                        <div class="card-image">
-                                        <img src="/img/barco1" class="responsive-img">
-                                        <span class="card-title">Card Title</span>
-                                        <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                                        </div>
-                                        <div class="card-content">
-                                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                        </div>
-                                    </div>
+                            <div class="col s12 m12">
+                                <div class="card">
+                                    <div class="card-image">
+                                    <img src="/img/barco1" class="responsive-img">
+                                    <span class="card-title">Mergulho em Fernando de Noronha</span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                                 </div>
+                                <div class="card-content">
+                                    <div class="informacoes-passeio">
+                                        <div class="area-preco">
+                                            <h5>Fernando de Noronha Passeio</h5>
+                                        </div>
+                                        <div class="area-preco">
+                                            <p>
+                                                A PARTIR DE <b>R$ 220,00</b>
+                                            </p>      
+                                        </div>
+                                    </div> <!-- Fim da div informacoes-passeio -->
+                                </div>
+                            </div>
+                        </div>
                         </div>
                     </a>
                 </div>
@@ -141,16 +156,25 @@
                     <a href="#">
                         <div class="row">
                             <div class="col s12 m12">
-                            <div class="card">
-                                <div class="card-image">
-                                <img src="/img/canal_veneza.jpg" class="responsive-img">
-                                <span class="card-title">Card Title</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                <div class="card">
+                                    <div class="card-image">
+                                    <img src="/img/canal_veneza.jpg" class="responsive-img">
+                                    <span class="card-title">Passeio de barco em Veneza</span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="informacoes-passeio">
+                                            <div class="area-preco">
+                                                <h5>Veneza (Passeio de Barco)</h5>
+                                            </div>
+                                            <div class="area-preco">
+                                                <p>
+                                                    A PARTIR DE <b>R$ 170,00</b>
+                                                </p>      
+                                            </div>
+                                        </div> <!-- Fim da div informacoes-passeio -->
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </a>
@@ -159,16 +183,26 @@
                     <a href="#">
                         <div class="row">
                             <div class="col s12 m12">
-                            <div class="card">
-                                <div class="card-image">
-                                <img src="/img/barco2" class="responsive-img">
-                                <span class="card-title">Card Title</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                <div class="card">
+                                    <div class="card-image">
+                                    <img src="/img/barco2" class="responsive-img">
+                                    <span class="card-title">Passeio de barco em Bora Bora</span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="informacoes-passeio">
+                                            <div class="area-preco">
+                                                <h5>Bora Bora (Passeio de Barco)</h5>
+                                            </div>
+                                            <div class="area-preco">
+                                                <p>
+                                                    A PARTIR DE <b>R$ 150,00</b>
+                                                </p>
+                                            
+                                            </div>
+                                        </div> <!-- Fim da div informacoes-passeio -->
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </a>
@@ -180,16 +214,23 @@
                     <a href="#">
                         <div class="row">
                             <div class="col s12 m12">
-                            <div class="card">
-                                <div class="card-image">
-                                <img src="/img/dunas" class="responsive-img">
-                                <span class="card-title">Card Title</span>
-                                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                <div class="card">
+                                    <div class="card-image">
+                                    <img src="/img/dunas" class="responsive-img">
+                                    <span class="card-title">Passeio nas Dunas</span>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="informacoes-passeio">
+                                            <div class="area-preco">
+                                                <h5>Maracajaú (Passeio de Lancha)</h5>
+                                            </div>
+                                            <div class="area-preco">
+                                                <p>A PARTIR DE <b>R$ 240,00</b> </p>
+                                            </div>
+                                        </div> <!-- Fim da div informacoes-passeio -->
+                                    </div>
                                 </div>
-                                <div class="card-content">
-                                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                            </div>
                             </div>
                         </div>
                     </a>
@@ -201,11 +242,20 @@
                                 <div class="card">
                                     <div class="card-image">
                                     <img src="/img/eiffel-tower.jpg" class="responsive-img">
-                                    <span class="card-title">Card Title</span>
+                                    <span class="card-title">Passeio na Torre Eiffel</span>
                                     <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
                                     </div>
                                     <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+                                        <div class="informacoes-passeio">
+                                            <div class="area-preco">
+                                                <h5>Bora Bora (Passeio de Barco)</h5>
+                                            </div>
+                                            <div class="area-preco">
+                                                <p>
+                                                    A PARTIR DE <b>R$ 280,00</b>
+                                                </p>
+                                            </div>
+                                        </div> <!-- Fim da div informacoes-passeio -->
                                     </div>
                                 </div>
                             </div>
@@ -305,29 +355,39 @@
     @yield('content')
 
     <footer id="footer">
-        <div class="row container text-center">
-            <div class="col s12">
-                <a href="#" class="social-icons">
-                    <img src="/img/icons/icon-facebook.png" alt="ícone do facebook" width="100%">
+        <div class="row container text-center ">
+            <div class="col s12 m12 l6">
+                <a href="https://www.facebook.com/" class="social-icons">
+                    <ion-icon name="logo-facebook" class="tamanho-icone" style="color: white;"></ion-icon>
                 </a>
-                <a href="#" class="social-icons">
-                    <img src="/img/icons/icon-instagram.png" alt="ícone do instagram" width="100%">
+                <a href="https://www.instagram.com/" class="social-icons">
+                    <ion-icon name="logo-instagram" class="tamanho-icone" style="color: white;"></ion-icon>
                 </a>
-                <a href="#" class="social-icons">
-                    <img src="/img/icons/icon-youtube.png" alt="ícone do youtube" width="100%">
+                <a href="https://www.youtube.com/" class="social-icons">
+                    <ion-icon name="logo-youtube" class="tamanho-icone" style="color: white;"></ion-icon>
                 </a>
-                <a href="#" class="social-icons">
-                    <img src="/img/icons/icon-whatsapp.png" alt="ícone do whatsapp" width="100%">
-                </a>
+            </div>
+            <!-- color: #D75290 -->
+
+            <div class="col s12 m12 l6 margin-responsive">
+                <div class="area-whatsapp justify-align-center">
+                    <a href="https://web.whatsapp.com/" class="social-icons">
+                        <ion-icon name="logo-whatsapp" class="tamanho-icone" style="color: white;"></ion-icon>
+                    </a>
+                    <p>Nosso Whatsapp: (84) 99999-9999</p>
+                </div>
             </div>
         </div>
 
-        <div class="row container" style="height: 100%;">
+        <div class="row container margin-responsive" style="height: 100%;">
             <div class="col s12 dp-flex justify-align-center" style="width: 100%; height: 100%;">
                 <p>Natal <span class="laranja"> Paraíso </span> &copy; 2021</p>
             </div>  
         </div>
     </footer>
 
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
