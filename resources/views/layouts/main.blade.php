@@ -29,6 +29,10 @@
         <link rel="stylesheet" href="/css/flex-properties.css">
         <link rel="stylesheet" href="/css/responsive.css">
 
+        <!-- JQuery da Aplicação -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- JS da Aplicação -->
         <script src="/js/script.js"></script>
     </head>
     <body onload="start()">
@@ -42,35 +46,69 @@
                 </div>
                 <div class="area-links">
                     <ul class="list-items">
-                        <li class="flex-1">
+                        <li class="flex-1 fk-1">
                             <a href="/" class="justify-align-center">INÍCIO</a>
                         </li>
-                        <li class="flex-1">
+                        <li class="flex-1 fk-1">
                             <a href="/passeios" class="justify-align-center">PASSEIOS</a>
                         </li>
-                        <li class="flex-1">
+                        <li class="flex-1 fk-1">
                             <a href="/" class="justify-align-center flex-1">SOBRE</a>
                         </li>
-                        <li class="flex-1">
+                        <li class="flex-1 fk-1">
                             <a href="/" class="justify-align-center">CONTATO</a>
                         </li>
                     </ul>
                 </div>
                 <div class="area-account">
                     <a href="#" class="fb-35">
-                        <!-- <img src="/img/icons/search.svg" width="100%"> -->
                         <i class="large material-icons" style="color: black;">search</i>
                     </a>
                     <a href="#" class="fb-35">
-                        <!-- <img src="/img/icons/account_circle.svg" width="100%"> -->
                         <i class="large material-icons" style="color: black;">account_circle</i>
                     </a>
                     <a href="/carrinho" class="fb-35">
-                        <!-- <img src="/img/icons/shopping_cart.svg" width="100%"> -->
                         <i class="large material-icons" style="color: black;">local_grocery_store</i>
                     </a>
                 </div>
+
+                <div class="dropdown-menu">
+                    <a href="#" class="justify-align-center" onclick="dropdown()" id="button-dropdown">
+                        <ion-icon name="reorder-three-outline" style="color: black; font-size: 50px;" ></ion-icon>
+                    </a>
+                </div>
             </nav>
+
+            <div id="area-dropdown">
+                <div class="area-links">
+                    <ul class="list-items">
+                        <li class="flex-1 fk-1">
+                            <a href="/" class="justify-align-center borda-inferior">INÍCIO</a>
+                        </li>
+                        <li class="flex-1 fk-1">
+                            <a href="/passeios" class="justify-align-center borda-inferior">PASSEIOS</a>
+                        </li>
+                        <li class="flex-1 fk-1">
+                            <a href="/" class="justify-align-center flex-1 borda-inferior">SOBRE</a>
+                        </li>
+                        <li class="flex-1 fk-1">
+                            <a href="/" class="justify-align-center">CONTATO</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="area-account">
+                    <a href="#" class="fb-35">
+                        <i class="large material-icons" style="color: black;">search</i>
+                    </a>
+                    <a href="#" class="fb-35">
+                        <i class="large material-icons" style="color: black;">account_circle</i>
+                    </a>
+                    <a href="/carrinho" class="fb-35">
+                        <i class="large material-icons" style="color: black;">local_grocery_store</i>
+                    </a>
+                </div>
+            </div>
+
         </div>
 
         <div id="carousel">

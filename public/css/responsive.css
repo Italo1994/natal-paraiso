@@ -17,6 +17,62 @@
     .margin-responsive {
         margin-top: 20px;
     }
+
+    .main-title {
+        margin-top: 100px;
+    }
+
+    .area-account {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .main-title {
+        margin-top: 80px;
+    }
+
+    .dropdown-menu {
+        display: flex;
+    }
+
+    .area-links {
+        display: none;
+    }
+
+    .area-account {
+        display: none;
+    }
+
+    .main-nav {
+        justify-content: space-between;
+    }
+
+    #area-dropdown {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #area-dropdown .area-links {
+        display: block;
+    }
+
+    #area-dropdown a {
+        height: 100%;
+        padding: 20px;
+    }
+
+    #area-dropdown ul li {
+        display: block;
+    }
+
+    ul li a:hover {
+        font-size: 11px;
+    }
+
+    #area-dropdown .area-account a {
+        display: inline-block;
+    }
 }
 
 @media (max-width: 992px) {

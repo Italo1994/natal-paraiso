@@ -77,23 +77,23 @@
     @yield('content')
 
     <footer id="footer">
-        <div class="row container text-center padding-sup">
+        <div class="row container text-center">
             <div class="col s12 m12 l6">
                 <a href="#" class="social-icons">
                     <ion-icon name="logo-facebook" class="tamanho-icone"></ion-icon>
                 </a>
                 <a href="#" class="social-icons">
-                    <ion-icon name="logo-instagram" class="tamanho-icone" style="color: #D75290;"></ion-icon>
+                    <ion-icon name="logo-instagram" class="tamanho-icone" style="color: white;"></ion-icon>
                 </a>
                 <a href="#" class="social-icons">
-                    <ion-icon name="logo-youtube" class="tamanho-icone" style="color: red;"></ion-icon>
+                    <ion-icon name="logo-youtube" class="tamanho-icone" style="color: white;"></ion-icon>
                 </a>
             </div>
 
             <div class="col s12 m12 l6 margin-responsive">
                 <div class="area-whatsapp justify-align-center">
                     <a href="#" class="social-icons">
-                        <ion-icon name="logo-whatsapp" class="tamanho-icone" style="color: green;"></ion-icon>
+                        <ion-icon name="logo-whatsapp" class="tamanho-icone" style="color: white;"></ion-icon>
                     </a>
                     <p>Nosso Whatsapp: (84) 99999-9999</p>
                 </div>

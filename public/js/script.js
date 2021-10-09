@@ -34,18 +34,24 @@ function start() {
 
 /* Função que determina o efeito de transição das imagens de apresentação do header na Home */
 function carousel() {
-  var pathIgm = [
+  var pathImg = [
     "/img/eiffel-tower.jpg",
     "/img/palace.jpg",
     "/img/canal_veneza.jpg"
   ];
 
-  let tamArr = pathIgm.length;
+  let tamArr = pathImg.length;
   let header = document.getElementById("carousel"); // seleciona o header
 
   let randomImg = Math.floor( (Math.random() * 10) % 3 ); // gera números aleatórios entre 0 e 3 para os índices do array de imagens
 
-  header.style.backgroundImage = 'url(' + pathIgm[randomImg] + ')'; // altera a imagem de fundo
+  header.style.backgroundImage = 'url(' + pathImg[randomImg] + ')'; // altera a imagem de fundo
   header.style.setProperty('transition', 'all 1.5s'); // adiciona a propriedade de transição
 
 }
+
+$(document).ready( function() {
+  $("#button-dropdown").click( function() {
+    $("#area-dropdown").slideToggle(1200);
+  });
+});
